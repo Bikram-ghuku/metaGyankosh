@@ -8,7 +8,7 @@ chunks = ""
 # with open("reddit_all_messages_and_replies_1.txt", "r") as f:
 #     documents.append(f.read())
 
-MAX_LINKS = 50
+MAX_LINKS = -1
 
 with open("allLinks.json", "r") as f:
     links = json.load(f)
