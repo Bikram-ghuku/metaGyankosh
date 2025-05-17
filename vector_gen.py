@@ -2,10 +2,7 @@ import json
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain.docstore.document import Document
 from langchain_community.document_loaders import WebBaseLoader
-import nest_asyncio
-
 
 chunks = ""
 # with open("reddit_all_messages_and_replies_1.txt", "r") as f:
@@ -23,7 +20,7 @@ with open("allLinks.json", "r") as f:
 
 print(f"Split into {len(chunks)} chunks.")
 
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 
 chroma_dir = "./chroma_store"
 vectorstore = Chroma.from_documents(

@@ -15,7 +15,7 @@ class State(TypedDict):
     answer: str
 load_dotenv()
 
-embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 vector_store = Chroma(
     collection_name="BOOKS",
     persist_directory="./chroma_store",
