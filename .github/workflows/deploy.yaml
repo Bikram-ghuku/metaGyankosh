@@ -54,7 +54,7 @@ jobs:
         find . -maxdepth 1 ! -name '.git' ! -name 'frontend' ! -name '.' -exec rm -rf {} +
         
         # Copy build files to root
-        cp -r frontend/build/* .
+        cp -r frontend/dist/* .
         
         # Clean up frontend folder
         rm -rf frontend
