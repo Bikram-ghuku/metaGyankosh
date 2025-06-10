@@ -41,7 +41,7 @@ const ChatApp = () => {
   // API call to backend
   const sendMessage = async (message, userId = 'user') => {
     try {
-      const response = await fetch('http://localhost:8000/ask', {
+      const response = await fetch(`${import.meta.env.VITE_BACKEND_URL}/ask`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
